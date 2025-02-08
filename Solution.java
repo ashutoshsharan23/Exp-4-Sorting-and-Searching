@@ -1,29 +1,26 @@
->> MergeSortedArray (Expriment -1)
-    
-# CODE: - 
 class Solution {
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int p1 = m - 1;  // Last non-zero element in nums1
-        int p2 = n - 1;  // Last element in nums2
-        int p = m + n - 1; // Last index of nums1
+    public int[] topKFrequent(int[] nums, int k) {
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+        for (int num : nums) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
 
-        // Merge nums1 and nums2 from the end
-        while (p1 >= 0 && p2 >= 0) {
-            if (nums1[p1] > nums2[p2]) {
-                nums1[p] = nums1[p1];
-                p1--;
-            } else {
-                nums1[p] = nums2[p2];
-                p2--;
+        List<Integer>[] buckets = new List[nums.length + 1];
+        for (int key : frequencyMap.keySet()) {
+            int freq = frequencyMap.get(key);
+            if (buckets[freq] == null) {
+                buckets[freq] = new ArrayList<>();
             }
-            p--;
+            buckets[freq].add(key);
         }
 
-        // If nums2 has remaining elements, copy them
-        while (p2 >= 0) {
-            nums1[p] = nums2[p2];
-            p2--;
-            p--;
+        List<Integer> result = new ArrayList<>();
+        for (int i = buckets.length - 1; i >= 0 && result.size() < k; i--) {
+            if (buckets[i] != null) {
+                result.addAll(buckets[i]);
+            }
         }
+
+        return result.stream().mapToInt(i -> i).toArray();
     }
 }
