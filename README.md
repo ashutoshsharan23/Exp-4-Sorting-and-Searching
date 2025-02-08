@@ -1,6 +1,6 @@
 # Exp-4-Sorting-and-Searching
 Sorting and searching are fundamental concepts in computer science, used to arrange data in a specific order and retrieve information efficiently.
-### **Sorting and Searching - Summary for Viva**
+### **Sorting and Searching - 
 
 Sorting and searching are fundamental concepts in computer science, used to organize and retrieve data efficiently.
 
