@@ -41,13 +41,13 @@ Searching is used to find elements in a data structure.
 
 These are the problem which are releated to Sorting-and-Searching are solved in the given expirement 🚀🚀🚀: - 
 
->> 1. Merge Sorted Array- https://leetcode.com/problems/merge-sorted-array/
+>> 1. (Merge Sorted Array)- https://leetcode.com/problems/merge-sorted-array/
 >>
 
->> 2. Top K frequent elements- https://leetcode.com/problems/top-k-frequent-elements/
+>> 2. (Top K Frequent Elements)- https://leetcode.com/problems/top-k-frequent-elements/
 >>
 
->> 3. Merge Intervals- https://leetcode.com/problems/merge-intervals/
+>> 3. (Merge Intervals)- https://leetcode.com/problems/merge-intervals/
 >> 
 
 
